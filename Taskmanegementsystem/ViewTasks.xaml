@@ -1,0 +1,35 @@
+﻿<Page x:Class="Taskmanegementsystem.ViewTasks"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Taskmanegementsystem"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewTasks">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="130*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="115*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="View Tasks" VerticalAlignment="Top" Height="38" Width="800" FontSize="20"/>
+        <Label x:Name="namel"  HorizontalAlignment="Left" Margin="250,43,0,0" VerticalAlignment="Top" Height="32" Width="251"/>
+        <Label Background="#FFD1D1D1" Content="Pending/In Progres" FontSize="15" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="150"/>
+        <DataGrid x:Name="datagrid1" Margin="78,10,117,10" Grid.Row="2" Height="100"/>
+        <Label Content="Task :" HorizontalAlignment="Left" Margin="101,13,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <TextBox x:Name="textinput"  HorizontalAlignment="Left" Margin="159,14,0,0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="40" Height="22"/>
+        <Label Content="Statues :" HorizontalAlignment="Left" Margin="308,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="400,12,0,0" Grid.Row="3" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Completed</ComboBoxItem>
+            <ComboBoxItem>In Progress</ComboBoxItem>
+            <ComboBoxItem>Pending</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="651,8,0,0" Grid.Row="3" VerticalAlignment="Top" Background="White" Height="28" Width="87" BorderBrush="Black" Click="Button_Click"/>
+        <Label Background="#FFD1D1D1" Content="Completed" FontSize="15" HorizontalAlignment="Left" Margin="18,26,0,0" Grid.Row="3" VerticalAlignment="Top" Height="36" Width="83"/>
+        <DataGrid x:Name="datagrid2" Margin="85,10,117,10" Grid.Row="4"></DataGrid>
+    </Grid>
+</Page>
